@@ -32,7 +32,7 @@ import math
 option_strikes = [90, 95, 100, 105, 110]
 
 
-class god(UTCBot):
+class NYUCase2(UTCBot):
 	'''
 	-------------------------------------------------- General Exchange Functions --------------------------------------------------
 	'''	
@@ -196,8 +196,8 @@ class god(UTCBot):
 				market_spread = float(best_ask.px) - float(best_bid.px)
 
 				if market_spread < 0: 
-					#iTs FrEe ReAl EsTaTe! (fr tho its free EV so we should execute on it asap)
-					# to do this we place an ask equal to their bid and a bid equal to their ask, size it to 1/2 bc we wanna get filled fast
+					#free money 
+					# size it to 1/2 bc we wanna get filled fast
 					await self.place_bid_update(f"UC{strike}{flag}", int(float(best_ask.qty))/2, float(best_ask.px), None)
 					await self.place_ask_update(f"UC{strike}{flag}", int(float(best_bid.qty))/2, float(best_bid.px), None)
 					continue # We wanna wait for this to fill before we place a real quote
@@ -446,4 +446,4 @@ class god(UTCBot):
 		return exchange_vol_estimate
 
 if __name__ == "__main__":
-	start_bot(god)
+	start_bot(NYUCase2)
