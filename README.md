@@ -7,3 +7,5 @@ Once we had that, we averaged it with the IV of the asset when it was being trad
 
 One way to improve this bot would be to not run the GARCH vol prediction model every time we get a price update from the exchange. This made our fair prediction take too long to calculate in comparison with the speed of messages we were getting from the exchange. To ameliorate this, we could have simply used the last 10 data points as an input to GARCH vol function. Having said that, we did not test it out and so there is the possibility that the vol prediction isn’t as accurate as we would want it to be given that there isn’t as much data. 
 
+In this case we placed 14 from the 40 teams we were competing against. 
+
