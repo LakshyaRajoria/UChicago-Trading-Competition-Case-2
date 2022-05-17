@@ -33,7 +33,7 @@ import math
 option_strikes = [90, 95, 100, 105, 110]
 
 
-class goofygoober(UTCBot):
+class NYUCase2(UTCBot):
 	'''
 	-------------------------------------------------- General Exchange Functions --------------------------------------------------
 	'''
@@ -452,4 +452,4 @@ class goofygoober(UTCBot):
 		return exchange_vol_estimate
 
 if __name__ == "__main__":
-	start_bot(goofygoober)
+	start_bot(NYUCase2)
